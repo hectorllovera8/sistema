@@ -1,0 +1,58 @@
+/* Estilo general del contenedor */
+.header {
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos hacia la derecha */
+    align-items: center; /* Alineación vertical */
+    width: 100%; /* Ocupa todo el ancho del contenedor principal */
+    background-color: #263043; /* Fondo opcional */
+    padding: 10px 20px; /* Espaciado interno */
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Contenedor de los ítems a la derecha */
+.header-right {
+    display: flex;
+    gap: 30px; /* Espaciado entre ítems */
+    align-items: center; /* Alineación vertical */
+    margin-left: auto; /* Empuja el contenedor hacia la derecha */
+}
+
+/* Cada ítem */
+.header-item {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre ícono y texto */
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.header-item:hover {
+    color: #007bff; /* Cambia el color al pasar el ratón */
+    transform: scale(1.1); /* Efecto de zoom */
+}
+
+/* Íconos */
+.icon {
+    font-size: 24px; /* Tamaño de los íconos */
+    color: rgb(187, 187, 196); /* Color inicial */
+}
+
+/* Texto */
+.header-item span {
+    font-size: 14px;
+    color: #c2c2c2;
+    font-weight: 500;
+}
+
+/* Adaptación móvil: centrar elementos */
+@media (max-width: 768px) {
+    .header {
+        justify-content: center; /* Centra los elementos en pantallas pequeñas */
+    }
+
+    .header-right {
+        flex-direction: column; /* Apila ítems verticalmente */
+        gap: 10px; /* Ajusta el espaciado */
+        margin-left: 0; /* Elimina margen para pantallas pequeñas */
+    }
+}
